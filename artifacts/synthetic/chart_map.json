@@ -1,0 +1,25 @@
+{
+  "disclaimer": "Synthetic mechanism check — not empirical SPY evidence, trading evidence, or an exact paper replication.",
+  "charts": [
+    {
+      "section": "Frozen simulation mechanisms",
+      "question": "How do the two pre-specified intraday factors differ while preserving mean(f^2)=1?",
+      "family": "comparison",
+      "type": "two-series line",
+      "fields": ["intraday_slot", "periodicity_factor", "scenario"],
+      "supported_claim": "The no-periodicity factor is flat and the U-shaped factor follows the frozen cosine construction; both are normalized.",
+      "palette_policy": "hard two-root cap with grey reference and blue focal series",
+      "artifact": "figures/synthetic/periodicity_factors.png"
+    },
+    {
+      "section": "Paired forecast-loss distributions",
+      "question": "How are HARP/HAR loss ratios distributed across all 200 paired replications by scenario, horizon, and loss?",
+      "family": "distribution",
+      "type": "grouped box plots",
+      "fields": ["loss_ratio_harp_over_har", "scenario", "horizon", "loss"],
+      "supported_claim": "The figure displays every frozen scenario/horizon/loss distribution with a ratio-one reference, an explicitly labeled focused ratio scale, and no seed selection.",
+      "palette_policy": "hard two-root cap with grey no-periodicity and blue U-shaped boxes",
+      "artifact": "figures/synthetic/loss_ratio_distributions.png"
+    }
+  ]
+}

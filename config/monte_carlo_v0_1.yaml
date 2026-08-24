@@ -1,0 +1,99 @@
+schema_version: 1
+status: FROZEN_BEFORE_FULL_RUN
+project:
+  description: Reproducible HAR/HARP implementation and Monte Carlo study of periodicity-aware realized-volatility forecasting.
+  interpretation: Synthetic mechanism check; not an exact paper replication and not empirical or trading evidence.
+
+dgp:
+  latent_state: "x[t] = omega + 0.35*x[t-1] + 0.30*mean(x[t-5:t-1]) + 0.30*mean(x[t-22:t-1]) + 0.25*eta[t]"
+  omega_expression: "0.05*log(1e-4)"
+  omega: -0.46051701859880917
+  daily_ar: 0.35
+  weekly_ar: 0.30
+  monthly_ar: 0.30
+  innovation_scale: 0.25
+  eta_distribution: standard_normal
+  variance_transform: "V[t]=exp(x[t])"
+  initial_lag_state: "22 values fixed at log(1e-4) before burn-in"
+  intraday_return: "r[t,i]=sqrt(V[t]/78)*f[i]*z[t,i]"
+  z_distribution: standard_normal
+  periodicity_amplitude: 0.6
+
+scenarios:
+  definitions:
+    - name: no_periodicity
+      factor: "f[i]=1"
+    - name: u_shaped_periodicity
+      factor: "sqrt((1+0.6*cos(2*pi*(i-0.5)/78))/mean_j(1+0.6*cos(2*pi*(j-0.5)/78)))"
+  normalization: "mean_i(f[i]^2)=1"
+  paired_innovations: true
+
+protocol:
+  burn_in_days: 500
+  usable_days: 3000
+  replications_per_scenario: 200
+  common_oos_origins: 500
+  master_seed: 20250107342
+  seed_engine: numpy.random.SeedSequence
+  child_seed_recording: state_uint32_and_spawn_key
+  process_start_method: spawn
+  max_workers: 4
+  output_sort: [replication, scenario, horizon, loss]
+
+intraday_estimator:
+  slots: 78
+  delta: 0.01282051282051282
+  rv: "sum_i(r[t,i]^2)"
+  bv: "(78/77)*1.57*sum_i(|r[t,i]|*|r[t,i-1]|)"
+  bv_constant_literal: 1.57
+  wsd_window_completed_days: 1008
+  causal_window: exactly_previous_completed_days_only
+  kappa: 505
+  short_h_multiplier: 0.741
+  short_h_weight_threshold: 6.635
+  wsd_multiplier: 1.081
+  factor_normalization: "(1/78)*sum_i(fWSD[i]^2)=1"
+  vintage_policy: immutable_historical_factor_and_filtered_rv
+  oracle_periodicity_headline_model: false
+
+models:
+  names: [HAR, HARP]
+  horizons: [1, 5, 22]
+  refit_frequency: every_forecast_origin
+  fitting: ordinary_least_squares_with_intercept
+  regularization: none
+  transform: levels
+  training_rows: 1000
+  training_row_rule: "row s is eligible iff s+h <= forecast_origin"
+  har_predictors: ["RV[t]", "mean(RV[t-4:t])", "mean(RV[t-21:t])"]
+  harp_predictors: ["RVP_vintage[t]", "mean(RVP_vintage[t-4:t])", "mean(RVP_vintage[t-21:t])"]
+  target: "mean(RV[t+1:t+h])"
+  target_periodicity_filtered: false
+
+inference:
+  losses: [MSE, QLIKE]
+  loss_ratio: "mean(HARP loss)/mean(HAR loss)"
+  loss_differential: "HARP loss-HAR loss"
+  negative_differential_favors: HARP
+  qlike: "y/f-log(y/f)-1"
+  qlike_floor_rule: "for nonpositive or nonfinite forecasts only: 1e-12*median(positive training targets)"
+  qlike_floor_multiplier: 1.0e-12
+  qlike_invalid_fraction: 0.001
+  dm_hac: Bartlett-Newey-West
+  dm_bandwidth: "max(h-1,floor(4*(N/100)^(2/9)))"
+  dm_hln_correction: true
+  dm_two_sided: true
+  dm_alpha: 0.05
+
+outputs:
+  replication_csv: results/synthetic/monte_carlo_replications.csv
+  summary_csv: results/synthetic/monte_carlo_summary.csv
+  child_seeds: artifacts/synthetic/child_seeds.json
+  run_manifest: artifacts/synthetic/run_manifest.json
+  periodicity_figure: figures/synthetic/periodicity_factors.png
+  loss_ratio_figure: figures/synthetic/loss_ratio_distributions.png
+  ratio_percentiles: [2.5, 50, 97.5]
+  report_ratio_below_one_share: true
+  report_dm_rejection_rates_both_directions: true
+  best_seed_plot: false
+  disclaimer: Synthetic mechanism check — not empirical SPY evidence, trading evidence, or an exact paper replication.

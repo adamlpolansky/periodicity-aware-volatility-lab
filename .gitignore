@@ -1,0 +1,52 @@
+# Python environments, caches, coverage, and builds
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local secrets and credentials
+.env*
+*.pem
+*.key
+*.token
+credentials*
+secrets*
+tokens*
+
+# Private audit and source references
+.private_audit/
+.private_references/
+.ci-smoke/
+reproductions/
+
+# Raw, vendor, empirical, and row/bar-level market data
+data/raw/**
+data/interim/**
+data/derived/**
+data/processed/**
+data/vendor/**
+private/**
+artifacts/empirical/**
+results/empirical/**
+reports/empirical/**
+figures/empirical/**
+notebooks/private/**
+manifests/vendor/**
+logs/provider/**
+*.parquet
+*.feather
+*.arrow
+
+# Local editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

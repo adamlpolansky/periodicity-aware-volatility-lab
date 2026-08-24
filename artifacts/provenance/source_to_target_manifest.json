@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "construction": "G2 manifest INCLUDE_PUBLIC allowlist only",
+  "source_manifest_sha256": "cc46b33d4b8213d23ca74f0bccd6baebff47ed686dda2d3965903877a9feb2de",
+  "transferred_file_count": 32,
+  "review_before_g3_default": "EXCLUDED",
+  "transferred_files": [
+    {
+      "source_path": ".gitignore",
+      "target_path": ".gitignore",
+      "source_sha256": "78cb148b29bea5a5ca3dcc454e8432e956d2af1c072f99cc39365b3ce5aa832a",
+      "target_sha256": "d1fa301508838a003f28ae77c82fa6a47d3fba41c37088436d168fc6e32896b5",
+      "disposition": "COPIED_THEN_PUBLIC_RELEASE_EDIT"
+    },
+    {
+      "source_path": "README.md",
+      "target_path": "README.md",
+      "source_sha256": "3a081a270e23db51da3a7f8c5cd7b79eb022817962bf6aa9a8c358f56a075caf",
+      "target_sha256": "78df218aefb601502f7dfaa5edf5538b655a81224ab8ae4093b786b6d3967f4d",
+      "disposition": "COPIED_THEN_PUBLIC_RELEASE_EDIT"
+    },
+    {
+      "source_path": "pyproject.toml",
+      "target_path": "pyproject.toml",
+      "source_sha256": "161e88cf16fb1cd6a90fb91eb87e55af7c54576e16b05a6d6e4c7c500ff0f4c2",
+      "target_sha256": "0b49bb5eb3b8245d6caecf0293e290e27d5bdd05a968d2f7126bb84bffb18d3b",
+      "disposition": "COPIED_THEN_PUBLIC_RELEASE_EDIT"
+    },
+    {
+      "source_path": "config/monte_carlo_v0_1.yaml",
+      "target_path": "config/monte_carlo_v0_1.yaml",
+      "source_sha256": "c4cb3db23563b7aa022abb7d80bbfc7bea0e320d20072e3f82efb28b5c13154a",
+      "target_sha256": "c4cb3db23563b7aa022abb7d80bbfc7bea0e320d20072e3f82efb28b5c13154a",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "docs/method_protocol_v0_2.md",
+      "target_path": "docs/method_protocol_v0_2.md",
+      "source_sha256": "d00895f5abe7302810f0844cd02c79a72ece3546cc6c9655fdec3f8f8105f196",
+      "target_sha256": "d00895f5abe7302810f0844cd02c79a72ece3546cc6c9655fdec3f8f8105f196",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "docs/paper_version_crosswalk.md",
+      "target_path": "docs/paper_version_crosswalk.md",
+      "source_sha256": "ac5ef302e108ca4c54d568dd827fded713546cbda3d5fadb970ca131d204c122",
+      "target_sha256": "ac5ef302e108ca4c54d568dd827fded713546cbda3d5fadb970ca131d204c122",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "docs/public_claims_and_nonclaims.md",
+      "target_path": "docs/public_claims_and_nonclaims.md",
+      "source_sha256": "9b3a5a26f8ac04439dc995cdefcacc10ee450874dbb1073c2896c1bc39c03b12",
+      "target_sha256": "9b3a5a26f8ac04439dc995cdefcacc10ee450874dbb1073c2896c1bc39c03b12",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "scripts/run_monte_carlo.py",
+      "target_path": "scripts/run_monte_carlo.py",
+      "source_sha256": "03d7aa77e805717fd2f6b9a6b6bda47fc6aa35efd7fbde0de8d0e3dea201eee7",
+      "target_sha256": "03d7aa77e805717fd2f6b9a6b6bda47fc6aa35efd7fbde0de8d0e3dea201eee7",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/__init__.py",
+      "target_path": "src/periodicity_aware_volatility_lab/__init__.py",
+      "source_sha256": "a0aaf5c48f117c954f7ebef8dab16c1df1b59a9d2ae7a48590d7ce472e32c682",
+      "target_sha256": "a0aaf5c48f117c954f7ebef8dab16c1df1b59a9d2ae7a48590d7ce472e32c682",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/aggregation.py",
+      "target_path": "src/periodicity_aware_volatility_lab/aggregation.py",
+      "source_sha256": "b1499918e42aa704bd74c14dc607cc90bcf96fb482404a53c5758b0d5d111e72",
+      "target_sha256": "b1499918e42aa704bd74c14dc607cc90bcf96fb482404a53c5758b0d5d111e72",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/data_adapter.py",
+      "target_path": "src/periodicity_aware_volatility_lab/data_adapter.py",
+      "source_sha256": "8d607d1ea2d6c0666617192c9510a1507472c3298bdabb4ad3807806d8f43dea",
+      "target_sha256": "8d607d1ea2d6c0666617192c9510a1507472c3298bdabb4ad3807806d8f43dea",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/dm.py",
+      "target_path": "src/periodicity_aware_volatility_lab/dm.py",
+      "source_sha256": "60064c4adbb82abbc416d55deea9bd4097bec85f818c279e2fced83a8eb22962",
+      "target_sha256": "60064c4adbb82abbc416d55deea9bd4097bec85f818c279e2fced83a8eb22962",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/manifest.py",
+      "target_path": "src/periodicity_aware_volatility_lab/manifest.py",
+      "source_sha256": "d358156a559aab8adc6db731c8922f278492e4aa5f0c563addad2496ef0887e9",
+      "target_sha256": "d358156a559aab8adc6db731c8922f278492e4aa5f0c563addad2496ef0887e9",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/metrics.py",
+      "target_path": "src/periodicity_aware_volatility_lab/metrics.py",
+      "source_sha256": "64314baac352b42d339d3cbcc156c2163ff4cf3de541df1066985be26966e5a5",
+      "target_sha256": "64314baac352b42d339d3cbcc156c2163ff4cf3de541df1066985be26966e5a5",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/models.py",
+      "target_path": "src/periodicity_aware_volatility_lab/models.py",
+      "source_sha256": "86722a8a4ca6066af97c1d5ca6be72e56743cfdf6e20c164e9e3fb3ebbb4d289",
+      "target_sha256": "86722a8a4ca6066af97c1d5ca6be72e56743cfdf6e20c164e9e3fb3ebbb4d289",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/periodicity.py",
+      "target_path": "src/periodicity_aware_volatility_lab/periodicity.py",
+      "source_sha256": "bac576142414982380c9ce5e76cc7d11ae6bc1e908a9b3ad55f0a52a0ef449a3",
+      "target_sha256": "bac576142414982380c9ce5e76cc7d11ae6bc1e908a9b3ad55f0a52a0ef449a3",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "src/periodicity_aware_volatility_lab/simulation.py",
+      "target_path": "src/periodicity_aware_volatility_lab/simulation.py",
+      "source_sha256": "dd12994f7b20fe3994c20bcd88201391fd7ee19bf2e4a8b5e3c8c4a1540dd1da",
+      "target_sha256": "dd12994f7b20fe3994c20bcd88201391fd7ee19bf2e4a8b5e3c8c4a1540dd1da",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/conftest.py",
+      "target_path": "tests/conftest.py",
+      "source_sha256": "35499151475a5336720bb199669d691e7d8cb1451249d18b68339d2bcabe56fc",
+      "target_sha256": "35499151475a5336720bb199669d691e7d8cb1451249d18b68339d2bcabe56fc",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/test_aggregation.py",
+      "target_path": "tests/test_aggregation.py",
+      "source_sha256": "0714fab8edf4e352763a8c5f1e99816ddb071d2952a8005d9c4f49a38e17ec2a",
+      "target_sha256": "0714fab8edf4e352763a8c5f1e99816ddb071d2952a8005d9c4f49a38e17ec2a",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/test_data_adapter.py",
+      "target_path": "tests/test_data_adapter.py",
+      "source_sha256": "d683f4c5937660f0cac54388ce64936c819f0bcb314ce421c400094aadc306af",
+      "target_sha256": "d683f4c5937660f0cac54388ce64936c819f0bcb314ce421c400094aadc306af",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/test_g2_audit.py",
+      "target_path": "tests/test_g2_audit.py",
+      "source_sha256": "f01fa43a37ebda2d38e6714e5a9a6b8c304a3cfe29d7a0871521a58e75cd43f2",
+      "target_sha256": "f01fa43a37ebda2d38e6714e5a9a6b8c304a3cfe29d7a0871521a58e75cd43f2",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/test_metrics_and_dm.py",
+      "target_path": "tests/test_metrics_and_dm.py",
+      "source_sha256": "849e67fdcc893d2b4c71825c6d0eb8ee4d3c2865ddf222ec5507c9c132dec622",
+      "target_sha256": "849e67fdcc893d2b4c71825c6d0eb8ee4d3c2865ddf222ec5507c9c132dec622",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/test_models.py",
+      "target_path": "tests/test_models.py",
+      "source_sha256": "cb613fd5ac90ccc75cdfb0fcbaeea3d98c5c3bfa0277a45ecbc5497941e81931",
+      "target_sha256": "cb613fd5ac90ccc75cdfb0fcbaeea3d98c5c3bfa0277a45ecbc5497941e81931",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/test_periodicity.py",
+      "target_path": "tests/test_periodicity.py",
+      "source_sha256": "4c89ae41350ab664587a8048ec93b61d3fc07ed1165d2e625b314b077494eb8b",
+      "target_sha256": "4c89ae41350ab664587a8048ec93b61d3fc07ed1165d2e625b314b077494eb8b",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "tests/test_simulation.py",
+      "target_path": "tests/test_simulation.py",
+      "source_sha256": "eb399bf075f6ee557b96978c29335d52cd3b73793af92f82634598b5882e5efe",
+      "target_sha256": "eb399bf075f6ee557b96978c29335d52cd3b73793af92f82634598b5882e5efe",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "results/synthetic/monte_carlo_replications.csv",
+      "target_path": "results/synthetic/monte_carlo_replications.csv",
+      "source_sha256": "0b4438de766310936f3454774019f30e4010b681594c4d900e2309999b837606",
+      "target_sha256": "0b4438de766310936f3454774019f30e4010b681594c4d900e2309999b837606",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "results/synthetic/monte_carlo_summary.csv",
+      "target_path": "results/synthetic/monte_carlo_summary.csv",
+      "source_sha256": "4364029b52714a85a6191e5a43377e754b49e48f83f8447818dcb9990597dce0",
+      "target_sha256": "4364029b52714a85a6191e5a43377e754b49e48f83f8447818dcb9990597dce0",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "artifacts/synthetic/child_seeds.json",
+      "target_path": "artifacts/synthetic/child_seeds.json",
+      "source_sha256": "d299cc16db52ff14e65933fdce2fbf238852f61ee985ac510a63e629b851545a",
+      "target_sha256": "d299cc16db52ff14e65933fdce2fbf238852f61ee985ac510a63e629b851545a",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "artifacts/synthetic/run_manifest.json",
+      "target_path": "artifacts/synthetic/run_manifest.json",
+      "source_sha256": "901201d7f9ced7886aa62d9ad4e7612ce8f3ef97c267f9cd4fa571af626b6abd",
+      "target_sha256": "901201d7f9ced7886aa62d9ad4e7612ce8f3ef97c267f9cd4fa571af626b6abd",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "artifacts/synthetic/chart_map.json",
+      "target_path": "artifacts/synthetic/chart_map.json",
+      "source_sha256": "a3f12f084a720a27c89d3fcf43880fa49cce86ff4c4a4f824cfc7958d07f42dd",
+      "target_sha256": "a3f12f084a720a27c89d3fcf43880fa49cce86ff4c4a4f824cfc7958d07f42dd",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "figures/synthetic/periodicity_factors.png",
+      "target_path": "figures/synthetic/periodicity_factors.png",
+      "source_sha256": "f9b0487e548aaedd70fa0205ecd8eddb89d56bfa8db1cbcae60ca6a269086933",
+      "target_sha256": "f9b0487e548aaedd70fa0205ecd8eddb89d56bfa8db1cbcae60ca6a269086933",
+      "disposition": "COPIED_UNCHANGED"
+    },
+    {
+      "source_path": "figures/synthetic/loss_ratio_distributions.png",
+      "target_path": "figures/synthetic/loss_ratio_distributions.png",
+      "source_sha256": "469fa435e865ceba37679ed99f75ccf934f4d3326fc6f5854ae7f5b48359002c",
+      "target_sha256": "469fa435e865ceba37679ed99f75ccf934f4d3326fc6f5854ae7f5b48359002c",
+      "disposition": "COPIED_UNCHANGED"
+    }
+  ]
+}

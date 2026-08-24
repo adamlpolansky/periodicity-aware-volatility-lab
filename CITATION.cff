@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "Periodicity-Aware Volatility Lab"
+abstract: "A reproducible HAR/HARP implementation and synthetic Monte Carlo mechanism study of periodicity-aware realized-volatility forecasting."
+authors:
+  - family-names: "Polanský"
+    given-names: "Adam"
+version: 0.2.0
+date-released: 2026-08-24
+license: MIT
+keywords:
+  - realized volatility
+  - HAR
+  - HARP
+  - Monte Carlo
+  - forecasting

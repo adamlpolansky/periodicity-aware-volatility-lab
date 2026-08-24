@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install package and development dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Test
+        run: python -m pytest
+      - name: Deterministic bounded smoke
+        run: |
+          python scripts/run_monte_carlo.py --root .ci-smoke/serial --workers 1 --smoke
+          python scripts/run_monte_carlo.py --root .ci-smoke/parallel --workers 2 --smoke
+          cmp .ci-smoke/serial/.private_audit/h1_smoke/replications_workers_1.csv .ci-smoke/parallel/.private_audit/h1_smoke/replications_workers_2.csv
