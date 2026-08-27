@@ -1,4 +1,4 @@
-# Periodicity-Aware Volatility Lab
+# HARP Realized-Volatility Forecasting
 
 > **Public synthetic mechanism study. No third-party market data or provider-derived outputs are included.**
 
